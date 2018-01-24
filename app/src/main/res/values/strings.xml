@@ -3,4 +3,5 @@
     <string name="paper_text">Paper</string>
     <string name="rock_text">Rock</string>
     <string name="scissor_text">Scissor</string>
+    <string name="choice_button">Choose</string>
 </resources>

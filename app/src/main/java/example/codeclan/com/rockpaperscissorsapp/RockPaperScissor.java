@@ -31,19 +31,19 @@ public class RockPaperScissor {
     public String checkWin(String playerAnswer, String computerAnswer){
 //        String computerAnswer = getRandomAnswer();
         if(playerAnswer == "Rock" && computerAnswer == "Scissor"){
-            return "player wins";
+            return "player wins!";
         } else if(playerAnswer == "Rock" && computerAnswer == "Paper"){
-            return "computer wins";
+            return "computer wins!";
         } else if (playerAnswer == "Paper" && computerAnswer == "Scissor"){
-            return "computer wins";
+            return "computer wins!";
         } else if(playerAnswer == "Paper" && computerAnswer == "Rock"){
-            return "player wins";
+            return "player wins!";
         } else if(playerAnswer == "Scissor" && computerAnswer == "Rock"){
-            return "computer wins";
+            return "computer wins!";
         } else if(playerAnswer == "Scissor" && computerAnswer == "Paper"){
-            return "player wins";
+            return "player wins!";
         } else  {
-            return "It's a draw, play again";
+            return "it's a draw, play again!";
         }
     }
 }
