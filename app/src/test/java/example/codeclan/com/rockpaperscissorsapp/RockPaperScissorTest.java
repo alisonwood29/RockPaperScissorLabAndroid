@@ -29,4 +29,24 @@ public class RockPaperScissorTest {
         String expected = rockPaperScissor.getRandomAnswer();
         assertNotNull(expected);
     }
+
+    @Test
+    public void rockBeatsScissors(){
+        String playerAnswer = "Rock";
+        String computerAnswer = "Scissor";
+        assertEquals("player wins", rockPaperScissor.checkWin(playerAnswer, computerAnswer));
+    }
+
+    @Test
+    public void paperBeatsRock(){
+        String playerAnswer = "Rock";
+        String computerAnswer = "Paper";
+        assertEquals("computer wins", rockPaperScissor.checkWin(playerAnswer, computerAnswer));
+    }
+    @Test
+    public void checkDraw(){
+        String playerAnswer = "Rock";
+        String computerAnswer = "Rock";
+        assertEquals("It's a draw, play again", rockPaperScissor.checkWin(playerAnswer, computerAnswer));
+    }
 }
