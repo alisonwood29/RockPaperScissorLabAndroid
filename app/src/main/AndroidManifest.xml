@@ -16,12 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="Game Screen"
-            android:parentActivityName=".HomePage"
-            >
-
-        </activity>
+            android:parentActivityName=".HomePage"></activity>
+        <activity android:name=".Score"></activity>
     </application>
 
 </manifest>

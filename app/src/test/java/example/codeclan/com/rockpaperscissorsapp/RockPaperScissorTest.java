@@ -3,6 +3,8 @@ package example.codeclan.com.rockpaperscissorsapp;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashMap;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -47,6 +49,16 @@ public class RockPaperScissorTest {
     public void checkDraw(){
         String playerAnswer = "Rock";
         String computerAnswer = "Rock";
-        assertEquals("It's a draw, play again", rockPaperScissor.checkWin(playerAnswer, computerAnswer));
+        assertEquals("Draw", rockPaperScissor.checkWin(playerAnswer, computerAnswer));
     }
+
+    @Test
+    public void canGetHashMap(){
+        String playerAnswer = "Rock";
+        String computerAnswer = "Paper";
+        HashMap<String, Integer> expected = new HashMap<>();
+        expected.put("computer wins!", 1);
+        assertEquals(expected, rockPaperScissor.trackScore(playerAnswer, computerAnswer));
+    }
+
 }

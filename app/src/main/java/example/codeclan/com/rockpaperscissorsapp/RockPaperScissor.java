@@ -2,6 +2,7 @@ package example.codeclan.com.rockpaperscissorsapp;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 /**
  * Created by alisonwood29 on 24/01/2018.
@@ -30,20 +31,37 @@ public class RockPaperScissor {
 
     public String checkWin(String playerAnswer, String computerAnswer){
 //        String computerAnswer = getRandomAnswer();
+        String outcome = "";
         if(playerAnswer == "Rock" && computerAnswer == "Scissor"){
-            return "player wins!";
+            outcome = "player wins!";
         } else if(playerAnswer == "Rock" && computerAnswer == "Paper"){
-            return "computer wins!";
+            outcome = "computer wins!";
         } else if (playerAnswer == "Paper" && computerAnswer == "Scissor"){
-            return "computer wins!";
+            outcome = "computer wins!";
         } else if(playerAnswer == "Paper" && computerAnswer == "Rock"){
-            return "player wins!";
+            outcome = "player wins!";
         } else if(playerAnswer == "Scissor" && computerAnswer == "Rock"){
-            return "computer wins!";
+            outcome = "computer wins!";
         } else if(playerAnswer == "Scissor" && computerAnswer == "Paper"){
-            return "player wins!";
+            outcome = "player wins!";
         } else  {
-            return "it's a draw, play again!";
+            outcome = "Draw";
         }
+      return outcome;
+    }
+
+    public HashMap<String, Integer> trackScore(String playerAnswer, String computerAnswer){
+        String outcome = checkWin(playerAnswer, computerAnswer);
+        HashMap<String, Integer> score = new HashMap<>();
+        if(!(score.containsKey(outcome))){
+            score.put(outcome, 1);
+        } else {
+            score.put(outcome, score.get(outcome) + 1);
+        }
+        return score;
+
+
+
+
     }
 }
